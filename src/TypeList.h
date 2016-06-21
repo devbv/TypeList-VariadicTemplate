@@ -1,19 +1,19 @@
 #pragma once
 
-struct nulltype {};
+struct NullType {};
 
-template <typename T, typename... Remains>
+template <typename T, typename... S>
 struct TypeList
 {
 	typedef T Head;
-	typedef TypeList<Remains...> Tail;
+	typedef TypeList<S...> Tail;
 };
 
 template <typename T>
 struct TypeList<T>
 {
 	typedef T Head;
-	typedef nulltype Tail;
+	typedef NullType Tail;
 };
 
 template <typename T, typename TL>
@@ -28,14 +28,14 @@ struct type_id<T, TypeList<T, S...>>
 	enum { value = 0 };
 };
 
-template <int index, typename TL>
+template <int I, typename TL>
 struct type_at
 {
-	typedef typename type_at<index - 1, typename TL::Tail>::type type;
+	typedef typename type_at<I - 1, typename TL::Tail>::type type;
 };
 
-template <typename Head, typename... Tail>
-struct type_at<0, TypeList<Head, Tail...>>
+template <typename Head, typename... S>
+struct type_at<0, TypeList<Head, S...>>
 {
 	typedef Head type;
 };
@@ -47,7 +47,7 @@ struct length
 };
 
 template <>
-struct length<nulltype>
+struct length<NullType>
 {
 	enum { value = 0 };
 };
