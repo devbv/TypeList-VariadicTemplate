@@ -142,11 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PacketDef.h" />
-    <ClInclude Include="TypeList.h" />
+    <ClInclude Include="..\src\PacketDef.h" />
+    <ClInclude Include="..\src\TypeList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Example.cpp" />
+    <ClCompile Include="..\src\Example.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
