@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="..\src\PacketDef.h" />
     <ClInclude Include="..\src\TypeList.h" />
+    <ClInclude Include="..\src\example\PacketBox.h">
+      <Filter>example</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Example.cpp" />
+    <Filter Include="example">
+      <UniqueIdentifier>{1ff629ce-0bee-49f5-8bdf-917f10b79879}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\example\PacketBox.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

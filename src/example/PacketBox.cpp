@@ -1,6 +1,6 @@
 #include <iostream>
-#include "TypeList.h"
-#include "PacketDef.h"
+#include "../TypeList.h"
+#include "PacketBox.h"
 
 typedef TypeList<PKT_LOGIN, PKT_LOGOUT, PKT_ADD_SCORE, PKT_SEND_MESSAGE> PACKET_TYPE;
 template <typename T>

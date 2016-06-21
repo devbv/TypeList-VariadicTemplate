@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\example\PacketBox.h" />
+    <ClInclude Include="..\src\TypeList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\example\PacketBox.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D235D628-B425-4BD4-AD92-28C3E1CBDD5B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -141,13 +148,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\PacketDef.h" />
-    <ClInclude Include="..\src\TypeList.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\Example.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
